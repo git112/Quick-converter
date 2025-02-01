@@ -1,155 +1,208 @@
 import React from 'react'
-import CardE from './ui/cardedit';
+// import CardE from './ui/cardedit';
+import { Card, CardContent } from './ui/Card';
 
+// Define the features array
+const features = [
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PDF to Word",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Word to PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PDF to Excel",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📊</span>,
+    title: "Excel to PDF",
+    description: "Transform Excel spreadsheets into PDF files"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PDF to PowerPoint",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">🎯</span>,
+    title: "PowerPoint to PDF",
+    description: "Convert PowerPoint presentations to PDF format"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PDF to JPG",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">🖼️</span>,
+    title: "JPG to PDF",
+    description: "Convert your images to PDF documents easily"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PDF to PNG",
+    description: "Convert Word documents to PDF format instantly"
+  },{
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "PNG to PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+];
+
+const features1 = [
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Merge PDFs",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Split PDFs",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Compress PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Edit PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Organize PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Watermark PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  
+];
+
+const features2 = [
+  {
+    icon: <span className="text-2xl mb-4">📄</span>,
+    title: "Word to PDF",
+    description: "Convert Word documents to PDF format instantly"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📊</span>,
+    title: "Excel to PDF",
+    description: "Transform Excel spreadsheets into PDF files"
+  },
+  {
+    icon: <span className="text-2xl mb-4">🎯</span>,
+    title: "PowerPoint to PDF",
+    description: "Convert PowerPoint presentations to PDF format"
+  },
+  {
+    icon: <span className="text-2xl mb-4">🖼️</span>,
+    title: "JPG to PDF",
+    description: "Convert your images to PDF documents easily"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📐</span>,
+    title: "AutoCAD to PDF",
+    description: "Convert AutoCAD drawings to PDF format"
+  },
+  {
+    icon: <span className="text-2xl mb-4">📝</span>,
+    title: "OpenOffice to PDF",
+    description: "Convert OpenOffice documents to PDF"
+  },
+  
+];
 
 function ToolSection() {
   return (
-
-    <div className="container py-12 bg-gray-900">
-      <h2 className="text-4xl font-bold text-center mb-8 text-blue-200 py-4">Meet our full product family</h2>
-      <h2 className="text-2xl font-bold mb-8 ml-4 text-blue-50">Conversions</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-6 bg-gray-900">
-        {/* <div className="flex justify-center flex-cols-1 sm:flex-cols-2 md:flex-cols-3 lg:flex-cols-6 gap-28 bg-gray-900"> */}
-
-
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="Word to PDF" icon="W" />
+    <section className="w-full py-10 md:py-24 lg:py-30 bg-gray-900 text-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl font-bold tracking-tighter text-center mb-12 text-white">
+        Meet our full product family
+        </h2>
+        <h2 className="text-2xl font-bold tracking-tighter my-8 text-white">
+          Converting Tools
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-8xl mx-auto ">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
+              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+            >
+              <CardContent className="pt-3 text-center flex flex-col items-center">
+                <div className="flex flex-col items-center justify-center">
+                  {feature.icon}
+                  <h3 className="text-xl font-bold mb-1 text-cyan-100">{feature.title}</h3>
+                  <p className="text-muted-foreground text-cyan-50">
+                    {feature.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="Excel to PDF" icon="X" />
+        <h2 className="text-2xl font-bold tracking-tighter my-8 text-white">
+          Editing Tools
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-8xl mx-auto ">
+          {features1.map((feature, index) => (
+            <Card
+              key={index}
+              className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
+              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+            >
+              <CardContent className="pt-3 text-center flex flex-col items-center">
+                <div className="flex flex-col items-center justify-center">
+                  {feature.icon}
+                  <h3 className="text-xl font-bold mb-1 text-cyan-100">{feature.title}</h3>
+                  <p className="text-muted-foreground text-cyan-50">
+                    {feature.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="PowerPoint to PDF" icon="P" />
+        <h2 className="text-2xl font-bold tracking-tighter my-8 text-white">
+          Zip Tools
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-8xl mx-auto ">
+          {features2.map((feature, index) => (
+            <Card
+              key={index}
+              className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
+              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+            >
+              <CardContent className="pt-3 text-center flex flex-col items-center">
+                <div className="flex flex-col items-center justify-center">
+                  {feature.icon}
+                  <h3 className="text-xl font-bold mb-1 text-cyan-100">{feature.title}</h3>
+                  <p className="text-muted-foreground text-cyan-50">
+                    {feature.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="JPG to PDF" icon="gallery" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="AutoCAD to PDF" icon="A" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="OpenOffice to PDF" icon="cloud-download" />
-        </div>
-
-
-
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-6 bg-gray-900">
-
-
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="Word to PDF" icon="W" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="Excel to PDF" icon="X" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="PowerPoint to PDF" icon="P" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="JPG to PDF" icon="gallery" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="AutoCAD to PDF" icon="A" />
-        </div>
-
-        <div className="w-16 h-16 my-4 mx-4">
-          <CardE title="OpenOffice to PDF" icon="cloud-download" />
-        </div>
-
-
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <h2 className="text-2xl font-bold mb-8 ml-4 py-4 text-blue-50">Editing</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 bg-gray-900">
-
-
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="Word to PDF" icon="W" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="Excel to PDF" icon="X" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="PowerPoint to PDF" icon="P" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="JPG to PDF" icon="gallery" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="AutoCAD to PDF" icon="A" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="OpenOffice to PDF" icon="cloud-download" />
-        </div>
-
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <h2 className="text-2xl font-bold mb-8 ml-4 text-blue-50 py-4">Zip Tools</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 bg-gray-900">
-
-
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="Word to PDF" icon="W" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="Excel to PDF" icon="X" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="PowerPoint to PDF" icon="P" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="JPG to PDF" icon="gallery" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="AutoCAD to PDF" icon="A" />
-        </div>
-
-        <div className="w-16 h-16 mb-4 ml-4">
-          <CardE title="OpenOffice to PDF" icon="cloud-download" />
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-      </div>
-
-    </div>
-
-
+    </section>
   );
-};
+}
 
 export default ToolSection;
+
+

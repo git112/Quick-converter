@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardE = () => {
+const CardE = ({ title, icon, description }) => {
   return (
     <StyledWrapper>
       <div className="card">
         <div className="content">
           <div className="back">
             <div className="back-content">
-              
-              <div className='title'></div>
+              <div className="icon text-3xl">{icon}</div>
+              <div className='title'>{title}</div>
             </div>
           </div>
           <div className="front">
-            
             <div className="front-content">
-              
+              <div className="description">
+                {description || 'Convert your files easily with our tool'}
+              </div>
             </div>
           </div>
         </div>
@@ -81,6 +82,8 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 30px;
+    text-align: center;
+    padding: 10px;
   }
 
   .card:hover .content {
@@ -121,19 +124,18 @@ const StyledWrapper = styled.div`
   }
 
   .description {
- box-shadow: 0px 0px 10px 5px #00000088;
-    width: 100%;
-    padding: 10px;
-    background-color: #00000099;
-    backdrop-filter: blur(5px);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
   }
 
   .title {
-    font-size: 25px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .title p {
@@ -194,6 +196,11 @@ const StyledWrapper = styled.div`
     100% {
       transform: translateY(0px);
     }
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 `;
 
