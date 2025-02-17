@@ -138,7 +138,7 @@ function ToolSection() {
             <Card
               key={index}
               className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
-              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+              hover:scale-105 hover:shadow-lg hover:shadow-teal-400 border-teal-400 "
             >
               <CardContent className="pt-3 text-center flex flex-col items-center">
                 <div className="flex flex-col items-center justify-center">
@@ -161,7 +161,7 @@ function ToolSection() {
             <Card
               key={index}
               className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
-              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+              hover:scale-105 hover:shadow-lg hover:shadow-teal-400 border-teal-400 "
             >
               <CardContent className="pt-3 text-center flex flex-col items-center">
                 <div className="flex flex-col items-center justify-center">
@@ -184,7 +184,7 @@ function ToolSection() {
             <Card
               key={index}
               className="bg-gray-900 border-2 transition-colors transform duration-500 shadow-md rounded-2xl border-transparent hover:bg-transparent 
-              hover:scale-105 hover:shadow-md hover:shadow-teal-400 border-teal-400 "
+              hover:scale-105 hover:shadow-lg hover:shadow-teal-400 border-teal-400 "
             >
               <CardContent className="pt-3 text-center flex flex-col items-center">
                 <div className="flex flex-col items-center justify-center">
