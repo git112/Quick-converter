@@ -3,11 +3,11 @@ import { Button } from "./ui/button"
 const FileSelector = ({ title = "Merge PDF files", description = "Combine PDFs in the order you want with the easiest PDF merger available." }) => {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-16 text-center">
-      <h1 className="text-4xl font-bold tracking-tight mb-4 text-white">
+      <h1 className="text-4xl font-bold tracking-tight mb-4 text-cyan-100">
         {title}
       </h1>
       
-      <p className="text-muted-foreground text-lg mb-12">
+      <p className="text-muted-foreground text-lg mb-12 text-cyan-50">
         {description}
       </p>
 
@@ -16,7 +16,7 @@ const FileSelector = ({ title = "Merge PDF files", description = "Combine PDFs i
           flex flex-col items-center justify-center bg-gray-800/50 hover:border-teal-400 transition-colors">
           <Button 
             size="lg" 
-            className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-xl mb-4"
+            className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-6 text-xl mb-4"
           >
             Select PDF files
           </Button>

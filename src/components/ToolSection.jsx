@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 // import CardE from './ui/cardedit';
 import { Card, CardContent } from './ui/Card';
-// import FileSelector from './FileSelector';
+import FileSelector from './FileSelector';
 
 // Define the features array
 const features = [
