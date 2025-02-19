@@ -133,11 +133,11 @@ function ToolSection() {
 
   if (selectedTool) {
     return (
-      <section className="w-full min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 md:px-6">
+      <div className="fixed inset-0 bg-gray-900 text-white z-50">
+        <div className="max-w-5xl mx-auto px-4 py-8">
           <button 
             onClick={() => setSelectedTool(null)}
-            className="text-cyan-100 hover:text-cyan-200 mb-8 mt-4 flex items-center"
+            className="text-cyan-100 hover:text-cyan-200 mb-8 flex items-center text-xl"
           >
             <span className="mr-2">←</span> Back to tools
           </button>
@@ -146,7 +146,7 @@ function ToolSection() {
             description={selectedTool.description}
           />
         </div>
-      </section>
+      </div>
     );
   }
 
