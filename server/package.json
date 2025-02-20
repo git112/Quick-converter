@@ -1,0 +1,27 @@
+{
+  "name": "file-converter-api",
+  "version": "1.0.0",
+  "description": "File conversion API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx": "^8.5.0",
+    "docx-pdf": "^0.0.1",
+    "express": "^4.18.2",
+    "mammoth": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pdf2pic": "^3.1.1",
+    "pptx2pdf": "^1.0.2",
+    "sharp": "^0.33.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
